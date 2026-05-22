@@ -1,4 +1,4 @@
-import json
+import json   
 from deck import Deck
 from card import Card
 
@@ -9,6 +9,9 @@ class Storage:
     def load(self, deck):
         try:
             with open(self.filepath, "r") as file:
+                content = file.read().strip()
+                if not content:
+                    return
                 data = json.load(file)
 
                 for d in data:
