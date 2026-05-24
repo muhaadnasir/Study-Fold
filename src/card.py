@@ -24,3 +24,4 @@ class Card:
         card = cls(d["question"], d["answer"], d["course"], d["topic"])
         card.id = d["id"]
         card.rating = d["rating"]
+        return card
